@@ -17,5 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('google.com')
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://practicetestautomation.com/practice-test-login/')
+
+WebUI.setText(findTestObject('Object Repository/LoginTest/Page_Test Login  Practice Test Automation/input_Username_username'), 
+    'student')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/LoginTest/Page_Test Login  Practice Test Automation/input_Password_password'), 
+    'p4y+y39Ir5PJb2ispxT0Ew==')
+
+WebUI.click(findTestObject('Object Repository/LoginTest/Page_Test Login  Practice Test Automation/button_Submit'))
+
+WebUI.click(findTestObject('Object Repository/LoginTest/Page_Logged In Successfully  Practice Test _c87e4f/a_Log out'))
+
+WebUI.closeBrowser()
 
